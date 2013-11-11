@@ -1,0 +1,12 @@
+---
+---
+
+<ul>
+{% for site in site.data.siteLinks %}
+  <li>
+    <a href="{{ site.url }}">
+      {{ site.name }}
+    </a>
+  </li>
+{% endfor %}
+</ul>
