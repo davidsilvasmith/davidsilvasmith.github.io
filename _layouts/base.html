@@ -1,0 +1,41 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="give bitcoins to friends and family">
+    <meta name="author" content="David Silva Smith">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+	<title>David Silva Smith's homepage</title>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+ </head>
+<body>
+  <div id="sidebar"> <ul>
+{% for site in site.data.siteLinks %}
+  <li>
+    <a href="{{ site.url }}">
+      {{ site.name }}
+    </a>
+  </li>
+{% endfor %}
+</ul> </div>
+  <div id="main">
+    {{content}}
+  </div>
+  <footer>
+
+  Last updated  {{site.time}}
+</footer>
+
+</body>
+</html>
