@@ -1,41 +1,93 @@
 ---
 ---
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="give bitcoins to friends and family">
-    <meta name="author" content="David Silva Smith">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
-	<title>David Silva Smith's homepage</title>
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="give bitcoins to friends and family">
+  <meta name="author" content="david silva smith">
+  <link href='https://fonts.googleapis.com/css?family=chivo:900' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css" media="screen" />
+  <link rel="canonical" href="{{ page.url }}" />
+  <title>david silva smith's homepage</title>
+  <!-- html5 shim and respond.js ie8 support of html5 elements and media queries -->
+    <!--[if lt ie 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
- </head>
-<body>
-  <div id="sidebar"> <ul>
-{% for site in site.data.siteLinks %}
-  <li>
-    <a href="{{ site.url }}">
-      {{ site.name }}
-    </a>
-  </li>
-{% endfor %}
-</ul> </div>
-  <div id="main">
-    {{content}}
-  </div>
-  <footer>
+      <![endif]-->
+    </head>
+    <body>
+      <div class="container">
+        <!-- static navbar -->
+        <div class="navbar navbar-default" role="navigation">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">project name</a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">link</a></li>
+              <li><a href="#">link</a></li>
+              <li><a href="#">link</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">dropdown <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="/home/about-me">about me</a></li>
+                  <li><a href="/home/photos">photos</a></li>
+                  <li><a href="/home/detroiters">lansingites</a></li>
+                  <li><a href="/projects">projects</a></li>
+                  <li><a href="/tools-i-use">tools</a></li>
 
-  Last updated  {{site.time}}
-</footer>
+                  <li class="divider"></li>
+                  <li class="dropdown-header">nav header</li>
+                  <li><a href="#">separated link</a></li>
+                  <li><a href="#">one more separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="./">default</a></li>
+              <li><a href="../navbar-static-top/">static top</a></li>
+              <li><a href="../navbar-fixed-top/">fixed top</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
 
-</body>
-</html>
+        <div id="sidebar"> <ul>
+          {% for site in site.data.sitelinks %}
+          <li>
+            <a href="{{ site.url }}">
+              {{ site.name }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul> 
+      </div>
+      <!-- main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>navbar example</h1>
+        {{content}}
+        <p>
+          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">view navbar docs &raquo;</a>
+        </p>
+      </div>
+      <footer>
+        last updated  {{site.time}}
+      </footer>
+    </div> <!-- /container -->
+
+
+    <!-- bootstrap core javascript
+    ================================================== -->
+    <!-- placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+  </body>
+  </html>
