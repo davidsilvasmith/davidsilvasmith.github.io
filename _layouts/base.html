@@ -23,60 +23,35 @@
         <!-- static navbar -->
         <div class="navbar navbar-default" role="navigation">
           <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">project name</a>
+            <a class="navbar-brand" href="/"><img src="http://www.gravatar.com/avatar/38c982e6a1d3ae992a40887a59748cdb?s=150" class="photo img-responsive img-thumbnail"></a>
           </div>
-          <div class="navbar-collapse collapse">
+          <div>
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#">link</a></li>
-              <li><a href="#">link</a></li>
-              <li><a href="#">link</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">dropdown <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="/home/about-me">about me</a></li>
-                  <li><a href="/home/photos">photos</a></li>
-                  <li><a href="/home/detroiters">lansingites</a></li>
-                  <li><a href="/projects">projects</a></li>
-                  <li><a href="/tools-i-use">tools</a></li>
+              <li><a href="/home/about-me">about me</a></li>
+              <li><a href="/home/photos">photos</a></li>
+              <li><a href="/home/detroiters">lansingites</a></li>
+              <li><a href="/projects">projects</a></li>
+              <li><a href="/tools-i-use">tools</a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+            {% for site in site.data.links %}
+            <li>
+              <a href="{{ site.url }}">
+                {{ site.name }}
+              </a>
+            </li>
+            {% endfor %}
+          </ul> 
+          </div>
+          <div class="nav navbar-nav">
 
-                  <li class="divider"></li>
-                  <li class="dropdown-header">nav header</li>
-                  <li><a href="#">separated link</a></li>
-                  <li><a href="#">one more separated link</a></li>
-                </ul>
-              </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="./">default</a></li>
-              <li><a href="../navbar-static-top/">static top</a></li>
-              <li><a href="../navbar-fixed-top/">fixed top</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
         </div>
-
-        <div id="sidebar"> <ul>
-          {% for site in site.data.sitelinks %}
-          <li>
-            <a href="{{ site.url }}">
-              {{ site.name }}
-            </a>
-          </li>
-          {% endfor %}
-        </ul> 
       </div>
+
+
       <!-- main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>navbar example</h1>
+      <div >
         {{content}}
-        <p>
-          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">view navbar docs &raquo;</a>
-        </p>
       </div>
       <footer>
         last updated  {{site.time}}
@@ -89,5 +64,35 @@
     <!-- placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="/javascripts/bootstrap.min.js"></script>
+        <script>
+        // $(document).ready(function () {
+        //     $('#@ViewBag.Nav').addClass('active');
+        // });
+        //open external links in a new window
+        $(document).ready(function () {
+            $("a[href^=http]").each(function () {
+                if (this.href.indexOf(location.hostname) == -1) {
+                    $(this).attr({
+                        target: "_blank",
+                        title: "Opens in a new window"
+                    });
+                }
+            })
+        });
+
+
+        $(document).ready(function () {
+            $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                e.target // activated tab
+                e.relatedTarget // previous tab
+
+                var targetTab = e.target.href.split('#')[1];
+                $('#myTab a[href="' + targetTab + '"]').tab('show');
+
+                $(".nav-tabs a").parent().removeClass('active');
+                $(".nav-tabs a[href=#" + targetTab + "]").parent().addClass('active');
+            });
+        });
+    </script>
   </body>
   </html>
