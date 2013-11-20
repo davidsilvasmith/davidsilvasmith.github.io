@@ -21,51 +21,52 @@
       <div class="container">
         <div class="row navbar navbar-default" role="navigation">
           <div class="col-md-4">
-           <a class="navbar-brand" href="/"><img src="http://www.gravatar.com/avatar/38c982e6a1d3ae992a40887a59748cdb?s=150" class="photo img-responsive img-thumbnail"></a> 
+            <div>
+           <a href="/"><img src="http://www.gravatar.com/avatar/38c982e6a1d3ae992a40887a59748cdb?s=150" class="photo img-responsive img-thumbnail"></a> 
+          </div> 
          </div>
          <div class="col-md-8">
-          <div >
-            <div>
-              <ul class="nav navbar-nav">
-                <li><a href="/home/about-me">About Me</a></li>
-                <li><a href="/home/photos">Photos</a></li>
-                <li><a href="/home/detroiters">Lansingites</a></li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/tools-i-use">Tools</a></li>
-              </ul>
-
-            </div>
-          </div>
+            <ul class="nav navbar-nav">
+              <li><a href="/">Home</a></li>
+              <li><a href="/home/about-me">About Me</a></li>
+              <li><a href="/home/photos">Photos</a></li>
+              <li><a href="/home/detroiters">Lansingites</a></li>
+              <li><a href="/projects">Projects</a></li>
+              <li><a href="/tools-i-use">Tools</a></li>
+              <li><a href="http://blog.davidsilvasmith.com">Blog</a></li>
+            </ul>
         </div>
       </div>
 
-     <div class="row">
-      <div class="col-md-4  hidden-sm hidden-xs">
-        <h2 >
-          Me on the web...
-        </h2>
-       <ul class="nav navbar-nav">
-          {% for site in site.data.links %}
-          <li>
-            <a href="{{ site.url }}">
-              {{ site.name }}
-            </a>
-          </li>
-          {% endfor %}
-        </ul>  
-       </div> 
-      
-      <div class="col-md-8" >
-        {{content}}
-      </div>
+      <div class="row">
+        <div class="col-md-4  hidden-sm hidden-xs">
+          <h2 >
+            Me on the web...
+          </h2>
+          <ul class="nav navbar-nav">
+            {% for site in site.data.links %}
+            <li>
+              <a href="{{ site.url }}">
+                {{ site.name }}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>  
+        </div> 
+
+        <div class="col-md-8" >
+          {{content}}
+        </div>
+      </div> 
+      <br />
+      <hr />
       <footer class="text-center">
         © {{ site.time| date: "%Y" }}
 
       </footer>
-    </div> 
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="/javascripts/bootstrap.min.js"></script>
-    <script>
+      <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+      <script src="/javascripts/bootstrap.min.js"></script>
+      <script>
         // $(document).ready(function () {
         //     $('#@ViewBag.Nav').addClass('active');
         // });
@@ -80,20 +81,16 @@
             }
           })
         });
-
-
-        $(document).ready(function () {
-          $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-                e.target // activated tab
-                e.relatedTarget // previous tab
-
-                var targetTab = e.target.href.split('#')[1];
-                $('#myTab a[href="' + targetTab + '"]').tab('show');
-
-                $(".nav-tabs a").parent().removeClass('active');
-                $(".nav-tabs a[href=#" + targetTab + "]").parent().addClass('active');
-              });
-        });
-    </script>
-  </body>
-</html>
+        </script>
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-1211714-4']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+      </body>
+      </html>
