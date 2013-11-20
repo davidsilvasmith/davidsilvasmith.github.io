@@ -8,10 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="give bitcoins to friends and family">
   <meta name="author" content="david silva smith">
-  <link href='https://fonts.googleapis.com/css?family=chivo:900' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css" media="screen" />
   <link rel="canonical" href="{{ page.url }}" />
-  <title>david silva smith's homepage</title>
+  <title>David Silva Smith's homepage</title>
   <!-- html5 shim and respond.js ie8 support of html5 elements and media queries -->
     <!--[if lt ie 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -20,69 +19,71 @@
     </head>
     <body>
       <div class="container">
-        <!-- static navbar -->
-        <div class="navbar navbar-default" role="navigation">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="/"><img src="http://www.gravatar.com/avatar/38c982e6a1d3ae992a40887a59748cdb?s=150" class="photo img-responsive img-thumbnail"></a>
-          </div>
-          <div>
-            <ul class="nav navbar-nav">
-              <li><a href="/home/about-me">about me</a></li>
-              <li><a href="/home/photos">photos</a></li>
-              <li><a href="/home/detroiters">lansingites</a></li>
-              <li><a href="/projects">projects</a></li>
-              <li><a href="/tools-i-use">tools</a></li>
-            </ul>
-            <ul class="nav navbar-nav">
-            {% for site in site.data.links %}
-            <li>
-              <a href="{{ site.url }}">
-                {{ site.name }}
-              </a>
-            </li>
-            {% endfor %}
-          </ul> 
-          </div>
-          <div class="nav navbar-nav">
+        <div class="row navbar navbar-default" role="navigation">
+          <div class="col-md-4">
+           <a class="navbar-brand" href="/"><img src="http://www.gravatar.com/avatar/38c982e6a1d3ae992a40887a59748cdb?s=150" class="photo img-responsive img-thumbnail"></a> 
+         </div>
+         <div class="col-md-8">
+          <div >
+            <div>
+              <ul class="nav navbar-nav">
+                <li><a href="/home/about-me">About Me</a></li>
+                <li><a href="/home/photos">Photos</a></li>
+                <li><a href="/home/detroiters">Lansingites</a></li>
+                <li><a href="/projects">Projects</a></li>
+                <li><a href="/tools-i-use">Tools</a></li>
+              </ul>
 
+            </div>
+          </div>
         </div>
       </div>
 
-
-      <!-- main component for a primary marketing message or call to action -->
-      <div >
+     <div class="row">
+      <div class="col-md-4  hidden-sm hidden-xs">
+        <h2 >
+          Me on the web...
+        </h2>
+       <ul class="nav navbar-nav">
+          {% for site in site.data.links %}
+          <li>
+            <a href="{{ site.url }}">
+              {{ site.name }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>  
+       </div> 
+      
+      <div class="col-md-8" >
         {{content}}
       </div>
-      <footer>
-        last updated  {{site.time}}
+      <footer class="text-center">
+        © {{ site.time| date: "%Y" }}
+
       </footer>
-    </div> <!-- /container -->
-
-
-    <!-- bootstrap core javascript
-    ================================================== -->
-    <!-- placed at the end of the document so the pages load faster -->
+    </div> 
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="/javascripts/bootstrap.min.js"></script>
-        <script>
+    <script>
         // $(document).ready(function () {
         //     $('#@ViewBag.Nav').addClass('active');
         // });
         //open external links in a new window
         $(document).ready(function () {
-            $("a[href^=http]").each(function () {
-                if (this.href.indexOf(location.hostname) == -1) {
-                    $(this).attr({
-                        target: "_blank",
-                        title: "Opens in a new window"
-                    });
-                }
-            })
+          $("a[href^=http]").each(function () {
+            if (this.href.indexOf(location.hostname) == -1) {
+              $(this).attr({
+                target: "_blank",
+                title: "Opens in a new window"
+              });
+            }
+          })
         });
 
 
         $(document).ready(function () {
-            $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+          $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
                 e.target // activated tab
                 e.relatedTarget // previous tab
 
@@ -91,8 +92,8 @@
 
                 $(".nav-tabs a").parent().removeClass('active');
                 $(".nav-tabs a[href=#" + targetTab + "]").parent().addClass('active');
-            });
+              });
         });
     </script>
   </body>
-  </html>
+</html>
