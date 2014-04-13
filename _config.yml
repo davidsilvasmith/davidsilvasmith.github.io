@@ -1,1 +1,2 @@
 exclude:  [CNAME, Gemfile, Gemfile.lock]
+markdown: kramdown
