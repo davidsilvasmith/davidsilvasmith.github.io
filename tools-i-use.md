@@ -66,6 +66,7 @@ What are you looking for? [Productivity Tools](#productivity-tools), [Influentia
  
 
 #### Investing
+ * [My bitcoin investing ebook](http://bit.ly/bitcoin-trading-ebook) How I am on track to retire in two years by investing in bitcoin.
  * [Options House](http://oh.tellapal.com/a/clk/22Dppg) - for stock trading. I use them because of their great customer service and super low fees!
  * [Coinbase](https://coinbase.com/?r=51939be28ebf783a71000021&utm_campaign=user-referral&src=referral-link) - for buying and selling bitcoins.
  * [Fidelity](http://www.fidelity.com) - for my retirement account. I have a ROTH IRA and a traditional IRA (rolled over 401ks) with them.
