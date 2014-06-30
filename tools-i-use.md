@@ -29,6 +29,9 @@ What are you looking for? [Productivity Tools](#productivity-tools), [Influentia
  * Camtasia - record and edit videos.
  * Audacity - edit audio.
  * [Paper](https://www.fiftythree.com/paper) (iPad) - I use this for drawing out app and website ideas.
+ * Shazam (iPhone) - names the artist and album of radio songs. Even integrates with Spotify for an easy playlist add!
+ * Google Maps - I use this for GPS navigation and for traveling around foreign cities.
+ * Google Calendar - I store personal appointments, reminders. It is super userful for coordinating with your Significant other. No more difficulties checking with so and so to schedule. Just share your calendars and solved. I also add 3rd party calendars, like library events and MSU Spartan sports schedules.
 
 
 #### Influential Books
