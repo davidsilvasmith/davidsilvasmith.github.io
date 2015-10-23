@@ -51,4 +51,6 @@ My business partner and I had a good day. He seems happier and in a great groove
 
 I wondered if he felt smothered by me. I asked him and he said no.
 
-I'm feeling good :)
+I had wanted to talk about how we are going to handle a few dangling issues and give him a heads up on my plans but didn't get to it.
+
+I'm feeling good and that feels good :)
