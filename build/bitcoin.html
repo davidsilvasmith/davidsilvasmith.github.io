@@ -9,25 +9,19 @@
   <title>David Silva Smith</title>
 
   <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
-  <link href="/stylesheets/site.css" rel="stylesheet" />
-  <script src="/javascripts/all.js"></script>
+
+  <script src="javascripts/bootstrap.min.js"></script>
+<link href="stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
 </head>
 
-<script src="javascripts/bootstrap.min.js"></script>
-<link href="stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
 
 <body class="bitcoin">
   <div class="container">
-    <div class="row navbar navbar-default" role="navigation">
       <nav class="navbar navbar-default">
   <div class="container-fluid">
-         <a href="/"><img src="http://www.gravatar.com/avatar/38c982e6a1d3ae992a40887a59748cdb?s=150" class="photo img-responsive img-thumbnail"></a> 
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      
-     </div>
+         <a href="/" class="pull-left"><img src="http://www.gravatar.com/avatar/38c982e6a1d3ae992a40887a59748cdb?s=150" class="photo img-responsive img-thumbnail"></a> 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="defaultNavbar">
+    <div class="collapse navbar-collapse text-center" id="defaultNavbar">
     
     <ul class="nav navbar-nav">
         
@@ -38,7 +32,7 @@
       
       <ul class="nav navbar-nav">
         
-        <li class="dropdown"><a href="tools-i-use.html" role="button" aria-expanded="false">Resources</a>
+        <li class="dropdown"><a href="resources.html" role="button" aria-expanded="false">Resources</a>
         </li>
         
       </ul> 
@@ -74,25 +68,19 @@
     </div>
   </div>
 </nav>
-   </div>
- 
-
   <div class-"row">
     <div class="col-md-4  hidden-sm hidden-xs">
 
 <h2 >Me on the web...</h2>
   <ul class="nav navbar-nav">
-    {% for site in site.data.links %}
-    <li>
-      <a href="{{ site.url }}">
-        {{ site.name }}
-      </a>
-    </li>
-    {% endfor %}
+
   </ul>
 
 <a class="twitter-timeline" href="https://twitter.com/DavidSilvaSmith" data-widget-id="457085262871273473">Tweets by @DavidSilvaSmith</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+</script>
+
 </div>
       <div class="col-md-8">
         <div>To better serve you this content moved to <a href="http://www.sowhatsbitcoin.com/" target="_blank" title="Opens in a new window">So What's bitcoin?</a></div>
@@ -105,11 +93,10 @@
 	The best way to think about bitcoin is that it is like <strong>digital gold</strong>. Bitcoin has all the properties of gold that make it good money: durability, portability, divisibility, and consistency (fungibility).
 
 	<ul>
-
-	<li><strong>Durability</strong> - Bitcoin is more durable than gold. Bitcoins can never be destroyed. They can be lost or sent to a place they can't be spent from, but there is nothing that can destroy bitcoins. Gold while very hard to destroy it can be rendered worthless through <a href="http://en.wikipedia.org/wiki/Gold#Chemistry">chemical reactions</a>.</li>
-	<li><strong>Portability</strong> - Bitcoin is much more portable than gold. Since it is digital bitcoin can be transferred to anyone in the universe almost instantly. Gold needs to be moved via physical mechanisms.</li>
-	<li><strong>Divisibility</strong> - Bitcoin is more easily divisible than gold. Bitcoins are divisible up to 8 decimal places and anyone can precisely send any fraction of bitcoin to anyone else. With gold it is hard to accurately create small divisions. For example how do give 1/100th of a penny's worth of gold? With bitcoin it is just as easy as sending a whole bitcoin.</li>
-	<li><strong>Consistency / Fungibility</strong> - Bitcoin is more fungible than gold. Each bitcoin is by definition equal in value to another bitcoin. While this is true with gold, in practice it is hard to know if a gold bar is 100% gold, just gold plated lead, or something else.</li>
+		<li><strong>Durability</strong> - Bitcoin is more durable than gold. Bitcoins can never be destroyed. They can be lost or sent to a place they can't be spent from, but there is nothing that can destroy bitcoins. Gold while very hard to destroy it can be rendered worthless through <a href="http://en.wikipedia.org/wiki/Gold#Chemistry">chemical reactions</a>.</li>
+		<li><strong>Portability</strong> - Bitcoin is much more portable than gold. Since it is digital bitcoin can be transferred to anyone in the universe almost instantly. Gold needs to be moved via physical mechanisms.</li>
+		<li><strong>Divisibility</strong> - Bitcoin is more easily divisible than gold. Bitcoins are divisible up to 8 decimal places and anyone can precisely send any fraction of bitcoin to anyone else. With gold it is hard to accurately create small divisions. For example how do give 1/100th of a penny's worth of gold? With bitcoin it is just as easy as sending a whole bitcoin.</li>
+		<li><strong>Consistency / Fungibility</strong> - Bitcoin is more fungible than gold. Each bitcoin is by definition equal in value to another bitcoin. While this is true with gold, in practice it is hard to know if a gold bar is 100% gold, just gold plated lead, or something else.</li>
 	</ul>
 </p>
 <h4>Why would I want bitcoins?</h4>

@@ -9,19 +9,14 @@
   <title><%= current_page.data.title || "David Silva Smith" %></title>
 
   <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
-  <%= stylesheet_link_tag :site %>
-  <%= javascript_include_tag :all %>
+
+  <%= partial "includes" %>
 </head>
 
-<%= partial "includes" %>
 
 <body class="<%= page_classes %>">
   <div class="container">
-    <div class="row navbar navbar-default" role="navigation">
       <%= partial "navbar" %>
-   </div>
- 
-
   <div class-"row">
     <%= partial "twitter" %>
       <div class="col-md-8">

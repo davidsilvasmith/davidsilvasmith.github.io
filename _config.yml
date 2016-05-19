@@ -1,0 +1,31 @@
+
+name: David Silva Smith's homepage
+markdown: kramdown
+timezone: America/Detroit
+highlighter: pygments
+author: David Smith
+safe: true
+lsi: false
+permalink: none
+
+exclude:  [CNAME, Gemfile, Gemfile.lock, '*.less', gruntfile.js, custom_css, node_modules, README.md, '*.svg', '*.docx']
+include: [glyphicons-halflings-regular.svg]
+
+url: http://www.davidsilvasmith.com
+
+
+relative_permalinks: false
+
+defaults:
+  -
+    scope:
+      path: "" # empty string for all files
+    values:
+      layout: "default"
+  -
+    scope:
+      path: "" # empty string for all files
+      type: post
+    values:
+      layout: "base"
+      is_post: true
