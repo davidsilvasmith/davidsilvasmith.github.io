@@ -1,0 +1,16 @@
+<div class="col-md-4  hidden-sm hidden-xs">
+
+<h2 >Me on the web...</h2>
+  <ul class="nav navbar-nav">
+    {% for site in site.data.links %}
+    <li>
+      <a href="{{ site.url }}">
+        {{ site.name }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+
+<a class="twitter-timeline" href="https://twitter.com/DavidSilvaSmith" data-widget-id="457085262871273473">Tweets by @DavidSilvaSmith</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>

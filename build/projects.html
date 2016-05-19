@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+  <!-- Use title if it's in the page YAML frontmatter -->
+  <title>David Silva Smith</title>
+
+  <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+  <link href="/stylesheets/site.css" rel="stylesheet" />
+  <script src="/javascripts/all.js"></script>
+</head>
+
+<script src="javascripts/bootstrap.min.js"></script>
+<link href="stylesheets/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+<body class="projects">
+  <div class="container">
+    <div class="row navbar navbar-default" role="navigation">
+      <nav class="navbar navbar-default">
+  <div class="container-fluid">
+         <a href="/"><img src="http://www.gravatar.com/avatar/38c982e6a1d3ae992a40887a59748cdb?s=150" class="photo img-responsive img-thumbnail"></a> 
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      
+     </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="defaultNavbar">
+    
+    <ul class="nav navbar-nav">
+        
+        <li class="dropdown"><a href="index.html" role="button" aria-expanded="false">Home</a>
+        </li>
+        
+      </ul> 
+      
+      <ul class="nav navbar-nav">
+        
+        <li class="dropdown"><a href="tools-i-use.html" role="button" aria-expanded="false">Resources</a>
+        </li>
+        
+      </ul> 
+            
+      <ul class="nav navbar-nav">
+        
+        <li class="dropdown"><a href="about.html" role="button" aria-expanded="false">About Me</a>
+        </li>
+        
+      </ul>    
+      
+      <ul class="nav navbar-nav">
+        
+        <li class="dropdown"><a href="projects.html" role="button" aria-expanded="false">Projects</a>
+        </li>
+        
+      </ul>
+
+      <ul class="nav navbar-nav">
+        
+        <li class="dropdown"><a href="bitcoin.html" role="button" aria-expanded="false">Bitcoin</a>
+        </li>
+        
+      </ul>
+
+      <ul class="nav navbar-nav">
+        
+        <li class="dropdown"><a href="blog.html" role="button" aria-expanded="false">Blog Temp(WIP)</a>
+        </li>
+        
+      </ul>
+            
+    </div>
+  </div>
+</nav>
+   </div>
+ 
+
+  <div class-"row">
+    <div class="col-md-4  hidden-sm hidden-xs">
+
+<h2 >Me on the web...</h2>
+  <ul class="nav navbar-nav">
+    {% for site in site.data.links %}
+    <li>
+      <a href="{{ site.url }}">
+        {{ site.name }}
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+
+<a class="twitter-timeline" href="https://twitter.com/DavidSilvaSmith" data-widget-id="457085262871273473">Tweets by @DavidSilvaSmith</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+      <div class="col-md-8">
+        <div dir="ltr">
+   <div>These subpages are personal notes which may be of public interest.</div>
+   <div>&nbsp;</div>
+   <div>Completed:</div>
+   <ol>
+      <li>8/2014 - <a href="http://www.bitcoinbulls.net">Bitcoin Bulls</a> - community for bitcoin investors</li>
+      <li>7/2014 - So What's Bitcoin - explains <a href="http://www.sowhatsbitcoin.com">bitcoin in plain English</a></li>
+      <li>5/2014 - Proof of concept peer-to-peer bitcoin trading platform through Facebook: <a href="https://coinvendor.herokuapp.com/faq">Coinvendor</a></li>
+      <li>11/2013 - Created <a href="http://www.gogivecoin.com">Go Give Coin</a> allowing bitcoin enthusiasts to give bitcoins as presents.</li>
+      <li>8/2013 - Created a bitcoin / USD <a href="http://en.wikipedia.org/wiki/Arbitrage">arbitrage</a> bot</li>
+      <li>6/2011 - 12/2011 - Developed prototype <a href="http://emailreducer.davidsilvasmith.com" target="_blank">software</a> to reduce the amount of time spend on email.</li>
+      <li>4/2009 - 1/2011 - Developed a gui wrapper on top of <a href="http://msdn.microsoft.com/en-us/windows/hardware/gg463009" target="_blank">WinDbg</a> - enabling devs to use a UI instead of the command line.</li>
+      <li>3/4/2009 - 3/27/2009 Work through Shared Source Common Language Infrastructure Internals Book</li>
+   </ol>
+   <p>Ongoing:</p>
+   <li>I like to dabble in art. Checkout my <a href="/art/">here.</a></li>
+   <p>Canned:</p>
+   <ol>
+      <li>Learn Intermediate Language</li>
+      <li>Mono Development</li>
+      <li>Managed OS Development (<a href="http://www.sharpos.org/">SharpOS</a> or <a href="http://www.gocosmos.org/">Cosmos</a> )</li>
+   </ol>
+</div>
+
+<div class="sites-subpages">
+   Subpages <span id="subpages-total-number">(1):</span>
+   <span>
+   <a href="/projects/rotor" dir="ltr">Shared Source Common Language Infrastructure (Rotor) Internals Book</a>
+   </span>
+</div>
+      </div>
+  </div>
+</div>
+
+ <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+ <script src="/javascripts/bootstrap.min.js"></script>
+ <script>
+        // $(document).ready(function () {
+        //     $('#@ViewBag.Nav').addClass('active');
+        // });
+        //open external links in a new window
+        $(document).ready(function () {
+          $("a[href^=http]").each(function () {
+            if (this.href.indexOf(location.hostname) == -1) {
+              $(this).attr({
+                target: "_blank",
+                title: "Opens in a new window"
+              });
+            }
+          })
+        });
+      </script>
+      <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-1211714-4']);
+          _gaq.push(['_trackPageview']);
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+    </body>
+    <footer class="text-center">
+      © {{date: "%Y"}}
+    </footer>
+    </html>
