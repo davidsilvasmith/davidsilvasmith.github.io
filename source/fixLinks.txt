@@ -1,9 +1,0 @@
-  <!--
-    <% for site in site.data.links %>
-    <li>
-      <a href="{{ site.url }}">
-        <%= site.name %>
-      </a>
-    </li>
-    <% end %>
-    !-->
