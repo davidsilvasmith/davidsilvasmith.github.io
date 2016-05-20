@@ -23,6 +23,14 @@ configure :development do
   activate :livereload
 end
 
+#activates blog
+activate :blog do |blog|
+  # set options on blog
+  blog.layout = "layout"
+  blog.permalink = ":title.html"
+  blog.sources   = "posts/:year-:month-:day-:title.html"
+ end
+
 ###
 # Helpers
 ###
