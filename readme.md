@@ -1,0 +1,1 @@
+CNAME doesn not point to the correct site. DNS needs to be configured or something. I just tried it for testing.
