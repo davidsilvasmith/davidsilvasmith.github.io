@@ -2,7 +2,13 @@
 
 <h2 >Me on the web...</h2>
   <ul class="nav navbar-nav">
-
+    <% data.links.each do |x| %>
+    <li>
+      <a href="<%= x.url %>">
+        <%= x.name %>
+      </a>
+    </li>
+    <% end %>
   </ul>
 
 <a class="twitter-timeline" href="https://twitter.com/DavidSilvaSmith" data-widget-id="457085262871273473">Tweets by @DavidSilvaSmith</a>
